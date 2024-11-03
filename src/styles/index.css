@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+/* add custom styles */
+@import url("./style.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --main-font: "Poppins", sans-serif;
+    --toastify-toast-width: 300px;
+    --toastify-font-family: var(--main-font);
+  }
+
+  body {
+    font-family: var(--main-font);
+    @apply overflow-x-hidden text-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+
+  input {
+    @apply outline-none bg-transparent;
+  }
+
+  button {
+    @apply outline-none cursor-pointer;
+  }
+
+  ::placeholder {
+    @apply text-sm;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px];
+  }
+}
+
+@layer utilities {
+  .flex-center-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-align-center {
+    @apply flex items-center;
+  }
+
+  .flex-center-between {
+    @apply flex items-center justify-between;
+  }
+
+  .grid-center {
+    @apply grid place-content-center;
+  }
+
+  .transition-ease-300 {
+    @apply transition-all duration-300 ease-[ease];
+  }
+
+  .bg-cover-center {
+    @apply bg-center bg-cover bg-no-repeat;
+  }
+}

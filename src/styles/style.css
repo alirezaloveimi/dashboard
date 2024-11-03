@@ -1,0 +1,52 @@
+.Toastify__toast-body > div:last-child {
+  word-break: keep-all;
+}
+
+.sidebar-link span:first-child {
+  background-color: #1a1f37;
+  color: #0075ff;
+}
+
+.sidebar-link.active span:first-child {
+  background-color: #0075ff;
+  color: #fff;
+}
+
+.sidebar-link.active span:last-child {
+  font-weight: bold;
+}
+
+.skeleton {
+  width: 60px;
+  height: 1rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #4b5563;
+  border-radius: 1rem;
+}
+.skeleton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  animation: skeleton 1.5s ease infinite;
+}
+
+@keyframes skeleton {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
